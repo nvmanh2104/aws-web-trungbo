@@ -1,7 +1,17 @@
+version: '3.6'
 services:
-  trungbo-aws:
-    build: .
-    container_name: trungbo-aws-ui
-    ports:
-      - "3000:80"      # đổi 3000 thành port bạn muốn trên server
-    restart: unless-stopped
+    aws-web-trungbo:
+        image: ngovanmanh/aws-web-trungbo:1.0.0
+        ports:
+        - 2028:80              
+        deploy:
+            restart_policy:
+                condition: on-failure
+            replicas: 1           
+        
+        networks:
+            - aws_system_network
+        
+networks: 
+  aws_system_network:
+    external: true
