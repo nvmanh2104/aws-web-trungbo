@@ -1,0 +1,59 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #0d3b6e;
+  --primary-light: #1a5fa8;
+  --primary-lighter: #e8f1fb;
+  --accent: #0096c7;
+  --accent-light: #caf0f8;
+  --success: #1b7a4a;
+  --success-bg: #eaf7f0;
+  --danger: #b5261e;
+  --danger-bg: #fdecea;
+  --warning: #b7690c;
+  --warning-bg: #fef4e3;
+  --info-bg: #e8f1fb;
+  --bg: #edf2f7;
+  --surface: #ffffff;
+  --surface2: #f5f8fc;
+  --border: #ccd8e8;
+  --border2: #a8bdd4;
+  --text: #12263a;
+  --text2: #3d5a72;
+  --text3: #7a94a8;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow: 0 1px 4px rgba(13,59,110,0.08), 0 2px 12px rgba(13,59,110,0.06);
+  --shadow-md: 0 4px 20px rgba(13,59,110,0.12);
+  --transition: 0.18s ease;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.aws-input {
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccd8e8;
+  font-size: 13px;
+  color: #12263a;
+  outline: none;
+  background: #f5f8fc;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.aws-input:focus {
+  border-color: #1a5fa8;
+}
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 99px; }

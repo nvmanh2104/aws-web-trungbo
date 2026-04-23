@@ -1,0 +1,7 @@
+services:
+  trungbo-aws:
+    build: .
+    container_name: trungbo-aws-ui
+    ports:
+      - "3000:80"      # đổi 3000 thành port bạn muốn trên server
+    restart: unless-stopped
